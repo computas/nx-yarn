@@ -1,0 +1,29 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "cli": "nx",
+  "title": "Publish executor",
+  "description": "",
+  "type": "object",
+  "properties": {
+    "outputPath": {
+      "type": "string",
+      "description": "The output path of the generated files relative to workspace root",
+      "$default": {
+        "$source": "argv",
+        "index": 0
+      },
+      "x-prompt": "Which folder should be published?"
+    },
+    "publishTag": {
+      "type": "string",
+      "description": "Tag to use in publish command with `--tag`, e.g. 'latest'",
+      "x-prompt": "What tag should this version be published with?"
+    },
+    "access": {
+      "type": "string",
+      "description": "Access level for published package, e.g. 'restricted'",
+      "x-prompt": "What access level would you like to use?"
+    }
+  },
+  "required": ["outputPath"]
+}
