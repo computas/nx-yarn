@@ -11,7 +11,7 @@
     "experimentalDecorators": true,
     "importHelpers": true,
     "target": "ESNext",
-    "module": "ESNext",
+    "module": "CommonJS",
     "lib": ["es2021"],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true
