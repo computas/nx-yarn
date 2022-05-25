@@ -1,13 +1,16 @@
 {
   "name": "@computas/nx-yarn",
-  "version": "1.0.0-alpha1",
+  "version": "1.0.0-alpha3",
   "main": "src/index.js",
   "executors": "./executors.json",
   "scripts": {
     "build": "tsc",
     "watch": "tsc -w",
-    "prepublishOnly": "cpy './{package.json,README.md,executors.json}' ./dist/ && cpy ./src/**/{*.d.ts,*.json} ./dist",
-    "postinstall": "husky install"
+    "copy-files": "cpy './{package.json,README.md,LICENSE,executors.json}' ./dist/ && cpy ./src/**/{*.d.ts,*.json} ./dist",
+    "prepublishOnly": "cd .. && yarn build && yarn copy-files",
+    "postinstall": "husky install",
+    "prepack": "pinst --disable",
+    "postpack": "pinst --enable"
   },
   "dependencies": {
     "@angular-devkit/schematics": "^13.3.6",
@@ -28,6 +31,7 @@
     "jest": "^28.1.0",
     "lint-staged": "^12.4.2",
     "nx": "^14.1.9",
+    "pinst": "^3.0.0",
     "prettier": "^2.6.2",
     "ts-jest": "^28.0.3",
     "ts-node": "^10.8.0",
