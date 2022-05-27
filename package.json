@@ -6,6 +6,7 @@
   "scripts": {
     "build": "tsc",
     "watch": "tsc -w",
+    "test": "jest",
     "copy-files": "cpy './{package.json,README.md,LICENSE,executors.json}' ./dist/ && cpy ./src/**/{*.d.ts,*.json} ./dist",
     "prepublishOnly": "cd .. && yarn build && yarn copy-files",
     "postinstall": "husky install",
