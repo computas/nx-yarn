@@ -2551,14 +2551,14 @@ __metadata:
   linkType: hard
 
 "cpy-cli@npm:^4.1.0":
-  version: 4.1.0
-  resolution: "cpy-cli@npm:4.1.0"
+  version: 4.2.0
+  resolution: "cpy-cli@npm:4.2.0"
   dependencies:
     cpy: ^9.0.0
     meow: ^10.1.2
   bin:
     cpy: cli.js
-  checksum: ae6f8474bacd888e5a1471a1257108a019f7d2b0c6862eeb40d4d09a5cde99d5112f16a4e6d635952ad6a5da15c0f373ade23d113cf02772fb2216638b8115d3
+  checksum: 883b142133fad9b57f10cf36483870c28e99bff34d4c166946e7bc26de1ec2786fca2e5102a061f7ff1fc73e5beaf90191f8a72eabdc3a4c97bd7f93e1fd793e
   languageName: node
   linkType: hard
 
